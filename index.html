@@ -3,94 +3,54 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#e8e9da">
+    <meta name="theme-color" content="#ffffff">
     <meta name="description" content="Something beautiful is coming.">
     <link rel="icon" type="image/png" sizes="128x128" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <title>Asterion</title>
     <style>
-      :root {
-        color-scheme: light;
-        font-family: Georgia, 'Times New Roman', serif;
-        background: #e8e9da;
-      }
-
       * { box-sizing: border-box; }
-
       html, body { margin: 0; min-height: 100%; }
-
-      main {
-        position: relative;
-        min-height: 100vh;
-        min-height: 100svh;
-        overflow: hidden;
+      body { background: #fff; color: #181818; font-family: 'DM Sans', Helvetica, Arial, sans-serif; }
+      main { position: relative; min-height: 100vh; min-height: 100svh; }
+      header { position: absolute; top: 3.33vh; top: 3.33svh; right: 2.08vw; left: 2.08vw; display: grid; grid-template-columns: 25% 48% 11% 16%; align-items: start; font-size: clamp(.53rem, .72vw, .68rem); line-height: 1.2; font-weight: 600; letter-spacing: -.025em; text-transform: uppercase; }
+      .brand { display: inline-flex; align-items: center; gap: .35rem; white-space: nowrap; }
+      .brand img { display: block; width: 1rem; height: 1rem; object-fit: contain; }
+      h1 { margin: 0; font: inherit; white-space: nowrap; }
+      h1 .muted { color: #aaa; font-weight: 400; }
+      .count { color: #737b78; white-space: nowrap; }
+      .social { justify-self: end; display: flex; align-items: center; gap: .6rem; margin-top: -.2rem; }
+      .social a { display: grid; width: 1.15rem; height: 1.15rem; place-items: center; color: inherit; opacity: .52; transition: opacity .15s ease; }
+      .social a:hover { opacity: 1; }
+      .social a:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+      .social svg { display: block; width: .72rem; height: .72rem; fill: currentColor; }
+      figure { position: absolute; top: 15vh; top: 15svh; left: 50%; width: min(64vw, 102.34vh); width: min(64vw, 102.34svh); height: 70vh; height: 70svh; margin: 0; transform: translateX(-50%); }
+      figure img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+      @media (max-aspect-ratio: 4 / 3) {
+        figure { top: 50%; width: calc(100% - 2.5rem); height: auto; aspect-ratio: 614 / 420; transform: translate(-50%, -50%); }
       }
-
-      img {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: 62% center;
-      }
-
-      h1 {
-        position: relative;
-        z-index: 1;
-        margin: 0;
-        padding: clamp(2rem, 12vh, 7rem) 1.5rem 0;
-        color: #203332;
-        font-size: clamp(1.6rem, 3.2vw, 3.4rem);
-        font-weight: 400;
-        letter-spacing: -0.035em;
-        line-height: 1.15;
-        text-align: center;
-        text-shadow: 0 1px 18px rgba(245, 245, 224, 0.8);
-      }
-
-      nav {
-        position: absolute;
-        z-index: 1;
-        right: 0;
-        bottom: clamp(1.5rem, 5vh, 3rem);
-        left: 0;
-        display: flex;
-        justify-content: center;
-        gap: 0.75rem;
-      }
-
-      nav a {
-        display: grid;
-        width: 2.5rem;
-        height: 2.5rem;
-        place-items: center;
-        color: #203332;
-        opacity: 0.68;
-        transition: opacity 150ms ease;
-      }
-
-      nav a:hover { opacity: 1; }
-      nav a:focus-visible { outline: 2px solid #203332; outline-offset: 3px; }
-      nav svg { display: block; width: 1.1rem; height: 1.1rem; fill: currentColor; }
-
-      @media (max-width: 600px) {
-        img { object-position: 64% center; }
-        h1 { padding-top: 9vh; }
+      @media (max-width: 520px) {
+        header { top: 1.5rem; right: 1.25rem; left: 1.25rem; grid-template-columns: 1fr auto; row-gap: 1.15rem; }
+        h1 { grid-column: 1 / -1; grid-row: 2; white-space: normal; }
+        .count { display: none; }
+        .social { grid-column: 2; grid-row: 1; }
       }
     </style>
   </head>
   <body>
     <main>
-      <img src="landscape.jpeg" alt="Dreamlike pastel road with a solitary tree and a small yellow car">
-      <h1>something beautiful is coming</h1>
-      <nav aria-label="Social media">
-        <a href="https://x.com/AsterionCrypto" aria-label="Asterion on X" target="_blank" rel="noopener noreferrer">
-          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.64 7.584H.472l8.6-9.83L0 1.154h7.594l5.243 6.932 6.064-6.933Zm-1.29 19.49h2.039L6.486 3.24H4.297L17.61 20.643Z"/></svg>
-        </a>
-        <a href="https://www.linkedin.com/company/asterioncrypto/" aria-label="Asterion on LinkedIn" target="_blank" rel="noopener noreferrer">
-          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.35V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.37-1.85 3.6 0 4.267 2.37 4.267 5.455v6.286ZM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124ZM7.119 20.452H3.555V9h3.564v11.452ZM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0Z"/></svg>
-        </a>
-      </nav>
+      <header>
+        <span class="brand"><img src="asterion-mark.png" alt="">Asterion</span>
+        <h1>something beautiful <span class="muted">is coming</span></h1>
+        <span class="count">01 / 01</span>
+        <nav class="social" aria-label="Social media">
+          <a href="https://x.com/AsterionCrypto" aria-label="Asterion on X" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.64 7.584H.472l8.6-9.83L0 1.154h7.594l5.243 6.932 6.064-6.933Zm-1.29 19.49h2.039L6.486 3.24H4.297L17.61 20.643Z"/></svg></a>
+          <a href="https://www.linkedin.com/company/asterioncrypto/" aria-label="Asterion on LinkedIn" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.35V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.37-1.85 3.6 0 4.267 2.37 4.267 5.455v6.286ZM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0-4.124ZM7.119 20.452H3.555V9h3.564v11.452ZM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0Z"/></svg></a>
+        </nav>
+      </header>
+      <figure><img src="landscape.jpeg" alt="Dreamlike pastel road with a solitary tree and a small yellow car"></figure>
     </main>
   </body>
 </html>
